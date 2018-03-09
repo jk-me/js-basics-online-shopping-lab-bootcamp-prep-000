@@ -21,6 +21,7 @@ function viewCart() {
   if (cart.length===0){
     console.log('Your shopping cart is empty.')
   }
+<<<<<<< HEAD
   else if (cart.length===1){
     console.log(`In your cart, you have ${Object.keys(cart[0])} at $${(cart[0])[Object.keys(cart[0])]}.`)
   }
@@ -40,6 +41,18 @@ function viewCart() {
     }
     q=q+(`and ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}.`)
     console.log('In your cart, you have '+q)
+=======
+  if else (cart.length===1){
+    console.log(`In you cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`)
+  }
+  else{
+    var s=[]
+    for(var i=0;i<cart.length;i++){
+      s.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}, `)
+    }
+    s.pop()
+    console.log(`In you cart, you have ${s}.`)
+>>>>>>> 81e8cc06c9a3446ebe0513b3638cee1751e79716
     
   }
 }
